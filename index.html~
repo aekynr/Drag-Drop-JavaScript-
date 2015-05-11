@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-GB" />
+    <meta name="author" content="aeKynr" />
+    <meta name="description" content="A longer description of your site." />
+    <meta name="keywords" content="some, words, characterising, your, web, site" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" media="all" /> 
+    <link rel="stylesheet" href="scripts/jquery-ui.css">
+    <script src="scripts/external/jquery/jquery.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var data;
+            var draggableId;
+            var itemId;
+            $(".column").sortable({
+                connectWith: ".column",
+                handle: ".Item-header",
+                cancel: ".Item-toggle",
+                placeholder: "Item-placeholder ui-corner-all",
+                stop: function (event, ui) {
+                    data = $(this).sortable('serialize');
+                    var dataS = data.split("&");
+                    window.location = "index.html?Item=" + draggableId + "&Section=" + itemId + "&Order=" + dataS;
+                }
+            });
+
+            $(".column").droppable({
+                drop: function (event, ui) {
+                    draggableId = ui.draggable.attr("id");
+                    itemId = $(this).attr('itemId');
+                }
+            });
+
+            $(".Item")
+              .addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+              .find(".Item-header")
+                .addClass("ui-widget-header ui-corner-all")
+                .prepend("<span class='ui-icon ui-icon-minusthick Item-toggle'></span>");
+
+            $(".Item-toggle").click(function () {
+                var icon = $(this);
+                icon.toggleClass("ui-icon-minusthick ui-icon-plusthick");
+                icon.closest(".Item").find(".Item-content").toggle();
+            });
+        });
+    </script>
+
+</head>
+<body>
+                <div class="column" itemId="Section 1">
+                    <h1>Section 1</h1>
+                            <div id="item-1" class="Item">
+                                <div class="Item-header">Subject 1</div>
+                                <div class="Item-content">Description 1</div>
+                            </div>
+			    <div id="item-2" class="Item">
+                                <div class="Item-header">Subject 2</div>
+                                <div class="Item-content">Description 2</div>
+                            </div>
+                </div>
+		<div class="column" itemId="Section 2">
+                    <h1>Section 2</h1>
+                            <div id="item-3" class="Item">
+                                <div class="Item-header">Subject 3</div>
+                                <div class="Item-content">Description 3</div>
+                            </div>
+			    <div id="item-4" class="Item">
+                                <div class="Item-header">Subject 4</div>
+                                <div class="Item-content">Description 4</div>
+                            </div>
+                </div>
+</body>
+</html>

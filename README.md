@@ -1,4 +1,4 @@
-# Drag-Drop-JavaScript-
+# dragdrop-javascript
 Catching drag and drop event in HTML by using Javascript.
 
 Screenshot<br>

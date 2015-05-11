@@ -2,10 +2,10 @@
 Catching drag and drop event in HTML by using Javascript.
 
 Screenshot<br>
-![My image](https://raw.githubusercontent.com/aekynr/Drag-Drop-JavaScript-/master/projectImages/Main.png)
+![My image](https://raw.githubusercontent.com/aekynr/dragdrop-javascript/master/projectImages/Main.png)
 <br><br>
 Screenshot (Link)<br>
-![My image](https://raw.githubusercontent.com/aekynr/Drag-Drop-JavaScript-/master/projectImages/Link.png)
+![My image](https://raw.githubusercontent.com/aekynr/dragdrop-javascript/master/projectImages/Link.png)
 <br><br>
 **Item:** Dragged Item<br>
 **Section:** Item's Section<br>

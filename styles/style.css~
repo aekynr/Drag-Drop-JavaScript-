@@ -1,0 +1,11 @@
+body{background-color: #ffffff; font-size:12px;}
+.column{width:250px; height:600px; float:left; padding:0 5px 0 5px; border-right:1px dashed #888888;}
+h1{font-weight: bold; font-size:12px; margin:0px 0px 10px 0px; background-color:#000000; color:#ffffff;}
+
+.portlet {margin: 0 1em 1em 0;padding: 0.3em;}
+.portlet-header {padding: 0.2em 0.3em;margin-bottom: 0.5em;position: relative;}
+.portlet-toggle {position: absolute;top: 50%;right: 0;margin-top: -8px;}
+.portlet-content {padding: 0.4em;}
+.portlet-placeholder {border: 1px dotted black;margin: 0 1em 1em 0;height: 50px;}
+.portlet-button{float:right;padding: 0.2em 0.3em;margin-bottom: 0.5em;position: relative;lay:none;padding: 0.4em;}
+.button-toggle {position: absolute;top: 50%;right: 0;margin-top: -8px;}
